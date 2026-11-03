@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cadmus Exam Tools</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1 id="title"></h1>
+  <form id="fields"></form>
+  <button id="run">Apply to this page</button>
+  <p class="note">Runs once each time you click. Nothing is re-applied afterwards, so you can still change anything by hand.</p>
+
+  <div class="quick">
+    <b>Quick run</b>
+    <label class="cadmus-row"><input type="checkbox" id="oneClick">
+      One-click: clicking the toolbar icon applies these settings straight away</label>
+    <p class="note">Keyboard shortcut: <b id="shortcut">not set</b>. To change it, go to
+      <code>chrome://extensions/shortcuts</code> in Chrome, or about:addons → ⚙ → Manage Extension Shortcuts in Firefox.</p>
+    <p class="note one-click-note">Turning off One-click: right-click the toolbar icon → Options (Chrome), or about:addons →
+      this extension → Options (Firefox).</p>
+  </div>
+  <div id="results"></div>
+
+  <script src="config.js"></script>
+  <script src="form.js"></script>
+  <script src="runner.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Cadmus Exam Tools",
+  "version": "1.2.0",
+  "description": "Move the Cadmus exam start and writing time earlier or later, and turn on Schoolyear or Lockdown, in one click.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.cadmus.io/*"
+  ],
+  "action": {
+    "default_title": "Cadmus Exam Tools",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "scripts": [
+      "config.js",
+      "form.js",
+      "runner.js",
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "run-saved": {
+      "suggested_key": {
+        "default": "Alt+Shift+1"
+      },
+      "description": "Apply saved settings to the current Cadmus page"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cadmus-exam-tools@local",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
