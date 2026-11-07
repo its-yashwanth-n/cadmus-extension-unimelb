@@ -460,7 +460,7 @@
     }
     document.body.appendChild(box);
     // Keep it up if something failed; otherwise fade away.
-    if (results.every((r) => r.ok)) setTimeout(() => box.remove(), 10000);
+    if (results.every((r) => r.ok)) setTimeout(() => box.remove(), 4000);
   }
 
   window.CadmusTools = { version: 2, run, toast };
